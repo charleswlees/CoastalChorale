@@ -1,0 +1,100 @@
+/*
+ * Charlie Lees
+ * CS5610 - Web Development
+ * Project 1
+ * Stylings for the Hamburger Navigation Menu
+ */
+
+.hamburgerMenu{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background: grey;
+    width : 250px;
+    height: 500px;
+    transition: .3s;
+}
+.open{
+    left: 0px;
+}
+.hamburgerMenu ul{
+    margin: 0;
+    padding: 20px 0;
+}
+.hamburgerMenu li{
+    list-style: none;
+    flex-direction: row;
+    border-bottom: 1px dashed white;
+}
+.hamburgerMenu svg{
+    fill: white;
+    height: 35px;
+    width: 35px;
+}
+.hamburgerMenu a{
+    padding: 10px 20px;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    align-content: center;
+}
+
+/* Define the hamburger menu button to turn the menu on or off*/
+.hamburgerMenuButton{
+    position: absolute;
+    top: 0;
+    right: -60px;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    cursor: pointer;
+    background-color:transparent;
+    border: none;
+    outline: none;
+}
+
+/*The three lines on the button*/
+.hamburgerMenuButton span{
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: white;
+    position: absolute;
+    top:24px;
+    transition: .3s;
+}
+.hamburgerMenuButton span:before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+}
+.hamburgerMenuButton span:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+}
+
+
+/*Animation when the button is pressed*/
+.hamburgerMenuButton.pressed span{
+    background: transparent;
+    transition: 0s;
+}
+.hamburgerMenuButton.pressed span:before{
+    top: 0;
+    transform: rotate(45deg);
+}
+.hamburgerMenuButton.pressed span:after{
+    top: 0;
+    transform: rotate(-45deg);
+
+}
+

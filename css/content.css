@@ -1,0 +1,68 @@
+/*
+ * Charlie Lees
+ * CS5610 - Web Development
+ * Project 1
+ * Style Pages for non-landing Page(s)
+ */
+html{
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+*, *::after{
+  box-sizing: inherit;
+  font-family: 'Ubuntu', sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/through-trees.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Section Container */
+.wrapper{
+  max-width: 1000px;
+  width: 85%;
+  padding:10px 10px 10px 10px;
+  margin: 0 auto;
+  display: table;
+}
+img.logo{
+    /*height: 200px;
+    width: 200px;*/
+    height:auto;
+    width: 100%;
+    min-width: 100px;
+    max-width: 200px;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+.whitespace span{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+td.description{
+    background-color:rgba(31,97,31,0.9);
+    padding: 10px 10px 10px 10px;
+    color: white;
+    border-radius: 20px;
+}
+table{
+    background-color:rgba(68,68,68,0.8);
+    border-radius: 20px;
+}
+
+@media (max-width:500px){
+    .whitespace span{
+    margin: 0px 0px 0px 0px;
+  }
+    .wrapper h1{
+    padding: 10px 10px 10px 10px;
+    }
+    .wrapper{
+    padding: 0px 0px 0px 0px;
+    }
+}
