@@ -100,6 +100,9 @@ p.hero-text {
   align-items: stretch;
   justify-content: space-evenly;
 }
+.nav-buttons a{
+  flex-shrink: 0;
+}
 /*SVG External Link Icons*/
 div.nav-icons {
   display: flex;
