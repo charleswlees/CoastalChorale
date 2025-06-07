@@ -16,5 +16,5 @@ export default defineConfig({
       },
     },
   },
-  base: "/LaurenCDickson/CoastalChorale/"
+  base: "/charleswlees/CoastalChorale/"
 })
