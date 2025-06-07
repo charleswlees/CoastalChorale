@@ -1,108 +1,13 @@
-<!-- 
-  Coastal Chorale Website
--->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="./css/index.css" rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="./img/svg/logo.svg">
-  <title>Coastal Chorale</title>
-  <script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-  <!-- Fonts -->
-  <!-- Font Bold -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Regular -->
-  <!--Font Cursive-->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gwendolyn:wght@400;700&display=swap" rel="stylesheet">
-
-  <!--Script for Naviagtion Menu-->
-  <script src="./javascripts/menu-script.js"></script>
-</head>
-
-<body>
-  <main>
-    <!--Content-->
-
-    <div class="hero">
-      <!--Logo-->
-      <!--
-        <img src="img/banner.jpg"/>
-      -->
-      <h1 class="hero-text gwendolyn-bold">Coastal Chorale</h1>
-      <p class="hero-text gwendolyn-regular">We're Cool and Stuff</p>
-      <div class="nav-buttons">
-        <button class="hero-text" onClick="window.location.href='schedule.html'">Schedule</button>
-        <button class="hero-text" onClick="window.location.href='members.html'">Members</button>
-        <button class="hero-text" onClick="window.location.href='contact.html'">Contact</button>
-      </div>
-    </div>
-    <div class="wrapper headshot">
-
-      <!--Video Clip-->
-      <video controls class="clip" src=video/river_run.mov />
-    </div>
-    <div class="wrapper">
-      <h1 class="title"></h1>
-    </div>
-
-    <!-- External Link Buttons -->
-    <div class="wrapper nav-icons">
-      <!-- Facebook -->
-      <button class="icon" onclick="window.open('https://www.facebook.com/profile.php?id=61560039329545','_blank')">
-        <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 474.294 474.294" xml:space="preserve">
-          <circle cx="237.111" cy="236.966" r="236.966" />
-          <path d="M404.742,69.754c92.541,92.541,92.545,242.586-0.004,335.134
-	c-92.545,92.541-242.593,92.541-335.134,0L404.742,69.754z" />
-          <path d="M472.543,263.656L301.129,92.238l-88.998,88.998l5.302,5.302l-50.671,50.667l41.474,41.474
-	l-5.455,5.452l44.901,44.901l-51.764,51.764l88.429,88.429C384.065,449.045,461.037,366.255,472.543,263.656z" />
-          <path style="fill:#FFFFFF;" d="M195.682,148.937c0,7.27,0,39.741,0,39.741h-29.115v48.598h29.115v144.402h59.808V237.276h40.134
-	c0,0,3.76-23.307,5.579-48.781c-5.224,0-45.485,0-45.485,0s0-28.276,0-33.231c0-4.962,6.518-11.641,12.965-11.641
-	c6.436,0,20.015,0,32.587,0c0-6.623,0-29.481,0-50.592c-16.786,0-35.883,0-44.306,0C194.201,93.028,195.682,141.671,195.682,148.937
-	z" />
-        </svg>
-
-        <p style="color:white">Facebook</p>
-      </button>
-      <!--Youtube  -->
-      <button class="icon">
-        <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 473.931 473.931" xml:space="preserve">
-          <circle cx="236.966" cy="236.966" r="236.966" />
-          <path d="M404.518,69.38c92.541,92.549,92.549,242.593,0,335.142c-92.541,92.541-242.593,92.545-335.142,0
-	L404.518,69.38z" />
-          <path d="M469.168,284.426L351.886,167.148l-138.322,15.749l-83.669,129.532l156.342,156.338
-	C378.157,449.322,450.422,376.612,469.168,284.426z" />
-          <path style="fill:#FFFFFF;" d="M360.971,191.238c0-19.865-16.093-35.966-35.947-35.966H156.372c-19.85,0-35.94,16.105-35.94,35.966
-	v96.444c0,19.865,16.093,35.966,35.94,35.966h168.649c19.858,0,35.947-16.105,35.947-35.966v-96.444H360.971z M216.64,280.146
-	v-90.584l68.695,45.294L216.64,280.146z" />
-        </svg>
-
-
-        <p style="color:white">Youtube</p>
-      </button>
-      <!-- Instagram -->
-      <button class="icon" onclick="window.open('https://www.instagram.com/coastal.chorale/','_blank')">
-        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 64 64">
-          <path
-            d="M 21.580078 7 C 13.541078 7 7 13.544938 7 21.585938 L 7 42.417969 C 7 50.457969 13.544938 57 21.585938 57 L 42.417969 57 C 50.457969 57 57 50.455062 57 42.414062 L 57 21.580078 C 57 13.541078 50.455062 7 42.414062 7 L 21.580078 7 z M 47 15 C 48.104 15 49 15.896 49 17 C 49 18.104 48.104 19 47 19 C 45.896 19 45 18.104 45 17 C 45 15.896 45.896 15 47 15 z M 32 19 C 39.17 19 45 24.83 45 32 C 45 39.17 39.169 45 32 45 C 24.83 45 19 39.169 19 32 C 19 24.831 24.83 19 32 19 z M 32 23 C 27.029 23 23 27.029 23 32 C 23 36.971 27.029 41 32 41 C 36.971 41 41 36.971 41 32 C 41 27.029 36.971 23 32 23 z">
-          </path>
-        </svg>
-
-
-        <p style="color:white">Instagram</p>
-      </button>
-
-    </div>
-
-  </main>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coastal Chorale</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

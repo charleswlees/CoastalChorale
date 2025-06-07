@@ -1,0 +1,22 @@
+@import "bootstrap/scss/bootstrap"; // Ensure this is still at the bottom
+
+.hero-section {
+  min-height: 700px; 
+
+  background-image: url('../assets/group_photo.jpg'); 
+  background-size: cover; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+
+  display: flex;
+  align-items: center; // Vertically center content
+  justify-content: center; // Horizontally center content
+  text-align: center; // Center text within content
+  color: white; // Ensure text is visible on potentially dark background
+}
+
+@include media-breakpoint-down(md) {
+  .hero-section {
+    min-height: 400px; // Slightly shorter on medium and down
+  }
+}
