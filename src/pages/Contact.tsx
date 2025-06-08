@@ -1,48 +1,50 @@
-import { Container, Card, Row, Col, Button } from "react-bootstrap";
+import { Container, Card, Row, Col } from "react-bootstrap";
 import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 import groupPhoto from "../assets/group_photos/2025/group_photo.jpg";
 
 function Contact() {
-  const contactEmail = "info@coastalchorale.org";
+  const googleFormEmbedUrl =
+    import.meta.env.VITE_GOOGLE_FORM_LINK;
 
   return (
     <Container className="my-5">
       <Row className="justify-content-center">
         <Col md={10} lg={8}>
-          <Card className="text-center shadow-sm">
+          <Card className="shadow-sm">
             <Card.Img
               variant="top"
               src={groupPhoto}
               alt="The Coastal Chorale group"
               style={{ maxHeight: "400px", objectFit: "cover" }}
             />
-            <Card.Body className="p-4 p-md-5">
+            {/* Make the card body text centered */}
+            <Card.Body className="p-4 p-md-5 text-center">
               <Card.Title as="h1" className="mb-3">
                 Get in Touch
               </Card.Title>
               <Card.Text className="lead mb-4">
-                We'd love to hear from you! Whether you have a question about
-                our next performance, are interested in booking the group, or
-                want to know more about auditions, here's how you can reach us.
+                We'd love to hear from you! Please use the form below to send us
+                a message.
               </Card.Text>
+            </Card.Body>
 
-              <div className="mb-4">
-                <h5 className="text-muted">The Best Way to Reach Us</h5>
-                <p>
-                  For all inquiries, please send an email to our general inbox.
-                </p>
-                <Button
-                  href={`mailto:${contactEmail}`}
-                  variant="primary"
-                  size="lg"
+            {/* Form section is now outside the main text body for better layout */}
+            <Card.Body className="p-4 p-md-5 pt-0">
+              <div className="google-form-container">
+                <iframe
+                  src={googleFormEmbedUrl}
+                  title="Contact Form"
+                  allowFullScreen
+                  style={{ border: 0 }}
                 >
-                  Email: {contactEmail}
-                </Button>
+                  Loading…
+                </iframe>
               </div>
+            </Card.Body>
 
+            <Card.Body className="p-4 p-md-5 pt-0 text-center">
               <hr />
-
               <div className="mt-4">
                 <h5 className="text-muted">Follow Our Journey</h5>
                 <p>Stay up to date with our latest news and media.</p>

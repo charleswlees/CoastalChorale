@@ -11,6 +11,7 @@ import Photos from "./pages/Photos.tsx";
 
 import "bootstrap/scss/bootstrap.scss";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./style/form.scss"
 import "./style/hero.scss";
 import "./style/style.scss";
 
