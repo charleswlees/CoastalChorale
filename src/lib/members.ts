@@ -32,7 +32,7 @@ directors.push(forrestMember);
 
 import GwenImage from '../assets/headshots_2025/MGK_4083.jpg'
 const gwenBio: Bio = {
-  name: "Gwen Hill",
+  name: "Gwendelyn Ruby Hill",
   part: "Alto"
 }
 const gwenMember: Member = {
@@ -168,7 +168,7 @@ members.push(henryMember);
 //Izzy Simbari
 import izzyImage from '../assets/headshots_2025/MGK_4139.jpg'
 const izzyBio: Bio ={
-  name: "Izzy Simbari",
+  name: "Isabelle \"Izzy\" Simbari",
   part: "Soprano"
 }
 const izzyMember: Member ={
@@ -180,7 +180,7 @@ members.push(izzyMember);
 //John Probert
 import johnImage from '../assets/headshots_2025/MGK_4129.jpg'
 const johnBio: Bio ={
-  name: "John Probert",
+  name: "John K. Probert",
   part: "Tenor"
 }
 const johnMember: Member ={
@@ -228,7 +228,7 @@ members.push(justinMember)
 //Kate McElwain
 import kateImage from '../assets/headshots_2025/MGK_4115.jpg'
 const kateBio: Bio ={
-  name: "Kate McElwain",
+  name: "Kate Nickerson",
   part: "Alto"
 }
 const kateMember: Member ={
@@ -312,7 +312,7 @@ members.push(pipMember)
 //Ryan Conway
 import ryanImage from '../assets/headshots_2025/MGK_4110.jpg'
 const ryanBio: Bio ={
-  name: "Ryan Conaway",
+  name: "Ryan Thomas Conaway",
   part: "Bass"
 }
 const ryanMember: Member ={
@@ -320,6 +320,18 @@ const ryanMember: Member ={
   photo: ryanImage
 }
 members.push(ryanMember)
+
+//Sara Macy
+import saraImage from '../assets/headshots_2025/MGK_4123.jpg'
+const saraBio: Bio ={
+  name: "Sara Macy",
+  part: "Soprano"
+}
+const saraMember: Member ={
+  bio: saraBio,
+  photo: saraImage
+}
+members.push(saraMember);
 
 //Simon Roussel
 import simonImage from '../assets/headshots_2025/MGK_4222.jpg'
@@ -336,7 +348,7 @@ members.push(simonMember);
 //SooZin Cha
 import soozinImage from '../assets/headshots_2025/MGK_4119.jpg'
 const soozinBio: Bio ={
-  name: "SooZin Cha",
+  name: "SooZin Kim Cha",
   part: "Alto"
 }
 const soozinMember: Member ={
