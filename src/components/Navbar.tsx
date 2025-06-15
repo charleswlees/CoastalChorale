@@ -67,10 +67,10 @@ function AppNavbar() {
             <div className="d-flex flex-column flex-lg-row">
               <Nav.Link
                 as={Link}
-                to="/recordings"
+                to="/program"
                 onClick={() => setExpanded(false)}
               >
-                Recordings
+                Program
               </Nav.Link>
               <Nav.Link as={Link} to="/photos" onClick={() => setExpanded(false)}>
                 Photos
