@@ -9,6 +9,21 @@
     <link rel="stylesheet" crossorigin href="/assets/index-5BcsYIsF.css">
   </head>
   <body>
+    <script>
+      (function () {
+        var l = window.location;
+        if (l.search.startsWith('?/')) {
+          var decoded = l.search
+            .slice(2)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, '/' + decoded + l.hash);
+        }
+      })();
+    </script>
     <div id="root"></div>
   </body>
 </html>
