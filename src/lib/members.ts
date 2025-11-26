@@ -10,10 +10,25 @@ export interface Bio {
 export interface Member {
   bio: Bio
   photo: string
+  bioText?: string
 }
 
 let members: Member[] = [];
 let directors: Member[] = [];
+
+const bioFiles = import.meta.glob<string>("/src/assets/bios/*.md", {
+  as: "raw",
+  eager: true,
+});
+
+const getBioText = (slug: string) =>
+  bioFiles[`/src/assets/bios/${slug}.md`] as string | undefined;
+
+const createMember = (bio: Bio, photo: string, slug: string): Member => ({
+  bio,
+  photo,
+  bioText: getBioText(slug),
+});
 
 ////////////////////
 /////Directors/////
@@ -24,10 +39,7 @@ const forrestBio: Bio = {
   name: "Forrest Tripp",
   part: "Bass",
 }
-const forrestMember: Member = {
-  bio: forrestBio,
-  photo: ForrestImage
-}
+const forrestMember = createMember(forrestBio, ForrestImage, "forrest-tripp")
 directors.push(forrestMember);
 
 import GwenImage from '../assets/headshots_2025/MGK_4083.jpg'
@@ -35,10 +47,7 @@ const gwenBio: Bio = {
   name: "Gwendelyn Ruby Hill",
   part: "Alto"
 }
-const gwenMember: Member = {
-  bio: gwenBio,
-  photo: GwenImage
-}
+const gwenMember = createMember(gwenBio, GwenImage, "gwendelyn-ruby-hill")
 directors.push(gwenMember);
 
 ////////////////////
@@ -51,10 +60,7 @@ const aaronBio: Bio = {
   name: "Aaron Lockman",
   part: "Tenor"
 }
-const aaronMember: Member = {
-  bio: aaronBio,
-  photo: aaronImage
-}
+const aaronMember = createMember(aaronBio, aaronImage, "aaron-lockman")
 members.push(aaronMember);
 
 //Abby Crowley
@@ -63,10 +69,7 @@ const abbyBio: Bio = {
   name: "Abby Crowley",
   part: "Alto"
 }
-const abbyMember: Member = {
-  bio: abbyBio,
-  photo: abbyImage
-}
+const abbyMember = createMember(abbyBio, abbyImage, "abby-crowley")
 members.push(abbyMember);
 
 //Andrew Beaucage
@@ -75,10 +78,7 @@ const andrewBio: Bio = {
   name: "Andrew Beaucage",
   part: "Tenor"
 }
-const andrewMember: Member = {
-  bio: andrewBio,
-  photo: andrewImage
-}
+const andrewMember = createMember(andrewBio, andrewImage, "andrew-beaucage")
 members.push(andrewMember)
 
 //Angela Rideout
@@ -87,10 +87,7 @@ const angelaBio: Bio = {
   name: "Angela Rideout",
   part: "Alto"
 }
-const angelaMember: Member = {
-  bio: angelaBio,
-  photo: angelaImage
-}
+const angelaMember = createMember(angelaBio, angelaImage, "angela-rideout")
 members.push(angelaMember)
 
 //Anna Roberts
@@ -99,10 +96,7 @@ const annaBio: Bio = {
   name: "Anna Roberts",
   part: "Alto"
 }
-const annaMember: Member = {
-  bio: annaBio,
-  photo: annaImage
-}
+const annaMember = createMember(annaBio, annaImage, "anna-roberts")
 members.push(annaMember)
 
 //Bonnie Snyder
@@ -111,10 +105,7 @@ const bonnieBio: Bio = {
   name: "Bonnie Snyder",
   part: "Soprano"
 }
-const bonnieMember: Member = {
-  bio: bonnieBio,
-  photo: bonnieImage
-}
+const bonnieMember = createMember(bonnieBio, bonnieImage, "bonnie-snyder")
 members.push(bonnieMember);
 
 //Camille Pierce
@@ -123,10 +114,7 @@ const camilleBio: Bio = {
   name: "Camille Pierce",
   part: "Alto"
 }
-const camilleMember: Member = {
-  bio: camilleBio,
-  photo: camilleImage
-}
+const camilleMember = createMember(camilleBio, camilleImage, "camille-pierce")
 members.push(camilleMember)
 
 //Charlie Lees
@@ -135,10 +123,7 @@ const charlieBio: Bio = {
   name: "Charlie Lees",
   part: "Tenor"
 }
-const charlieMember: Member = {
-  bio: charlieBio,
-  photo: charlieImage
-}
+const charlieMember = createMember(charlieBio, charlieImage, "charlie-lees")
 members.push(charlieMember)
 
 //Dylan Lindsey
@@ -147,10 +132,7 @@ const dylanBio: Bio ={
   name: "Dylan Lindsey",
   part: "Bass"
 }
-const dylanMember: Member ={
-  bio: dylanBio,
-  photo: dylanImage
-}
+const dylanMember = createMember(dylanBio, dylanImage, "dylan-lindsey")
 members.push(dylanMember)
 
 //Henry Doering
@@ -159,10 +141,7 @@ const henryBio: Bio ={
   name: "Henry Doering",
   part: "Bass"
 }
-const henryMember: Member ={
-  bio: henryBio,
-  photo: henryImage
-}
+const henryMember = createMember(henryBio, henryImage, "henry-doering")
 members.push(henryMember);
 
 //Izzy Simbari
@@ -171,10 +150,7 @@ const izzyBio: Bio ={
   name: "Isabelle \"Izzy\" Simbari",
   part: "Soprano"
 }
-const izzyMember: Member ={
-  bio: izzyBio,
-  photo: izzyImage
-}
+const izzyMember = createMember(izzyBio, izzyImage, "isabelle-izzy-simbari")
 members.push(izzyMember);
 
 //John Probert
@@ -183,10 +159,7 @@ const johnBio: Bio ={
   name: "John K. Probert",
   part: "Tenor"
 }
-const johnMember: Member ={
-  bio: johnBio,
-  photo: johnImage
-}
+const johnMember = createMember(johnBio, johnImage, "john-k-probert")
 members.push(johnMember)
 
 //Jonna Casoli-Bucklin
@@ -195,10 +168,7 @@ const jonnaBio: Bio ={
   name: "Jonna Casoli-Bucklin",
   part: "Alto"
 }
-const jonnaMember: Member ={
-  bio: jonnaBio,
-  photo: jonnaImage
-}
+const jonnaMember = createMember(jonnaBio, jonnaImage, "jonna-casoli-bucklin")
 members.push(jonnaMember)
 
 //Julianna Burke
@@ -207,10 +177,7 @@ const juliannaBio: Bio ={
   name: "Julianna Burke",
   part: "Soprano"
 }
-const juliannaMember: Member ={
-  bio: juliannaBio,
-  photo: juliannaImage
-}
+const juliannaMember = createMember(juliannaBio, juliannaImage, "julianna-burke")
 members.push(juliannaMember);
 
 //Justin Lamoureaux
@@ -219,10 +186,7 @@ const justinBio: Bio ={
   name: "Justin Lamoureaux",
   part: "Bass"
 }
-const justinMember: Member ={
-  bio: justinBio,
-  photo: justinImage
-}
+const justinMember = createMember(justinBio, justinImage, "justin-lamoureaux")
 members.push(justinMember)
 
 //Kate McElwain
@@ -231,10 +195,7 @@ const kateBio: Bio ={
   name: "Kate Nickerson",
   part: "Alto"
 }
-const kateMember: Member ={
-  bio: kateBio,
-  photo: kateImage
-}
+const kateMember = createMember(kateBio, kateImage, "kate-nickerson")
 members.push(kateMember)
 
 //Lauren Dickson
@@ -243,10 +204,7 @@ const laurenBio: Bio ={
   name: "Lauren Dickson",
   part: "Soprano"
 }
-const laurenMember: Member ={
-  bio: laurenBio,
-  photo: laurenImage
-}
+const laurenMember = createMember(laurenBio, laurenImage, "lauren-dickson")
 members.push(laurenMember)
 
 //Lydia Schneider
@@ -255,10 +213,7 @@ const lydiaBio: Bio ={
   name: "Lydia Schneider",
   part: "Soprano"
 }
-const lydiaMember: Member ={
-  bio: lydiaBio,
-  photo: lydiaImage
-}
+const lydiaMember = createMember(lydiaBio, lydiaImage, "lydia-schneider")
 members.push(lydiaMember)
 
 //Mike Knowles
@@ -267,10 +222,7 @@ const mikeBio: Bio ={
   name: "Mike Knowles",
   part: "Bass"
 }
-const mikeMember: Member ={
-  bio: mikeBio,
-  photo: mikeImage
-}
+const mikeMember = createMember(mikeBio, mikeImage, "mike-knowles")
 members.push(mikeMember)
 
 //Morgan Houlihan
@@ -279,10 +231,7 @@ const morganBio: Bio ={
   name: "Morgan Houlihan",
   part: "Alto"
 }
-const morganMember: Member ={
-  bio: morganBio,
-  photo: morganImage
-}
+const morganMember = createMember(morganBio, morganImage, "morgan-houlihan")
 members.push(morganMember)
 
 //Natalia Kimball
@@ -291,10 +240,7 @@ const nataliaBio: Bio ={
   name: "Natalia Kimball",
   part: "Soprano"
 }
-const nataliaMember: Member ={
-  bio: nataliaBio,
-  photo: nataliaImage
-}
+const nataliaMember = createMember(nataliaBio, nataliaImage, "natalia-kimball")
 members.push(nataliaMember)
 
 //Pip Kolmar
@@ -303,10 +249,7 @@ const pipBio: Bio ={
   name: "Pip Kolmar",
   part: "Tenor"
 }
-const pipMember: Member ={
-  bio: pipBio,
-  photo: pipImage
-}
+const pipMember = createMember(pipBio, pipImage, "pip-kolmar")
 members.push(pipMember)
 
 //Ryan Conway
@@ -315,10 +258,7 @@ const ryanBio: Bio ={
   name: "Ryan Thomas Conaway",
   part: "Bass"
 }
-const ryanMember: Member ={
-  bio: ryanBio,
-  photo: ryanImage
-}
+const ryanMember = createMember(ryanBio, ryanImage, "ryan-thomas-conaway")
 members.push(ryanMember)
 
 //Sara Macy
@@ -327,10 +267,7 @@ const saraBio: Bio ={
   name: "Sara Macy",
   part: "Soprano"
 }
-const saraMember: Member ={
-  bio: saraBio,
-  photo: saraImage
-}
+const saraMember = createMember(saraBio, saraImage, "sara-macy")
 members.push(saraMember);
 
 //Simon Roussel
@@ -339,10 +276,7 @@ const simonBio: Bio ={
   name: "Simon Roussel",
   part: "Tenor"
 }
-const simonMember: Member ={
-  bio: simonBio,
-  photo: simonImage
-}
+const simonMember = createMember(simonBio, simonImage, "simon-roussel")
 members.push(simonMember);
 
 //SooZin Cha
@@ -351,10 +285,7 @@ const soozinBio: Bio ={
   name: "SooZin Kim Cha",
   part: "Alto"
 }
-const soozinMember: Member ={
-  bio: soozinBio,
-  photo: soozinImage
-}
+const soozinMember = createMember(soozinBio, soozinImage, "soozin-kim-cha")
 members.push(soozinMember)
 
 //Taylor Everett
@@ -363,10 +294,7 @@ const taylorBio : Bio ={
   name: "Taylor Everett",
   part: "Tenor"
 }
-const taylorMember : Member ={
-  bio: taylorBio,
-  photo: taylorImage
-}
+const taylorMember  = createMember(taylorBio, taylorImage, "taylor-everett")
 members.push(taylorMember)
 
 //Wyatt Cannell
@@ -375,15 +303,7 @@ const wyattBio : Bio ={
   name: "Wyatt Cannell",
   part: "Bass"
 }
-const wyattMember : Member ={
-  bio: wyattBio,
-  photo: wyattImage
-}
+const wyattMember  = createMember(wyattBio, wyattImage, "wyatt-cannell")
 members.push(wyattMember)
 
 export {directors, members}
-
-
-
-
-

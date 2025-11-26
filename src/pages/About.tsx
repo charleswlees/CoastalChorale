@@ -1,7 +1,7 @@
 // src/components/About.tsx
 
-import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Image, Button, Collapse } from "react-bootstrap";
 
 // Import the data and types from your data file
 // Adjust the path '../data/members' as needed based on your file structure.
@@ -9,6 +9,9 @@ import { directors, members} from "../lib/members.ts";
 import type {Member} from '../lib/members.ts'
 
 const MemberProfile: React.FC<{ member: Member }> = ({ member }) => {
+  const [isBioOpen, setIsBioOpen] = useState(false);
+  const bioId = `bio-${member.bio.name.replace(/\s+/g, "-").toLowerCase()}`;
+
   return (
     <Row className="my-4 align-items-center">
       <Col sm={4} md={3} className="text-center text-sm-start mb-3 mb-sm-0">
@@ -31,6 +34,40 @@ const MemberProfile: React.FC<{ member: Member }> = ({ member }) => {
             <strong>Joined:</strong> {member.bio.yearjoined}
           </p>
         */}
+        {member.bioText && (
+          <div className="mt-3">
+            <Button
+              variant="link"
+              className="p-0 text-decoration-none"
+              onClick={() => setIsBioOpen((prev) => !prev)}
+              aria-expanded={isBioOpen}
+              aria-controls={bioId}
+            >
+              <span aria-hidden="true">{isBioOpen ? "▼" : "▶"}</span>{" "}
+              Bio
+              <span className="visually-hidden">
+                {isBioOpen ? "Hide bio" : "Show bio"}
+              </span>
+            </Button>
+            <Collapse in={isBioOpen}>
+              <div
+                id={bioId}
+                className="mt-2 text-muted"
+                style={{
+                  whiteSpace: "pre-wrap",
+                  maxHeight: "200px",
+                  overflowY: "auto",
+                  backgroundColor: "#f8f9fa",
+                  border: "1px solid #e2e6ea",
+                  borderRadius: "0.5rem",
+                  padding: "0.75rem 1rem",
+                }}
+              >
+                {member.bioText}
+              </div>
+            </Collapse>
+          </div>
+        )}
       </Col>
     </Row>
   );
