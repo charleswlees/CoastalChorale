@@ -13,15 +13,16 @@ function Home() {
               >
                 <h1 className="display-4 fw-bold mb-3">Coastal Chorale</h1>
                 <p className="lead mb-4">Southern Maine's Premier Choir</p>
-                {
-                  //
-                  //                <button className="btn btn-primary btn-lg me-2">
-                  //                  Learn More
-                  //                </button>
-                  //                <button className="btn btn-outline-light btn-lg">
-                  //                  Get Started
-                  //                </button>
-                }
+                <div className="d-flex justify-content-center">
+                  <a
+                    className="btn btn-primary btn-lg"
+                    href="https://coastalchorale.thundertix.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Get Tickets
+                  </a>
+                </div>
               </div>
             </div>
           </div>

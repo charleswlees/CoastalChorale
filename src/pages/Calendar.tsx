@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { fetchCalendarEvents } from '../lib/googleCalendarApi';
+import React, { useEffect, useState } from "react";
+import { fetchCalendarEvents } from "../lib/googleCalendarApi";
 
 interface CalendarEvent {
   id: string;
@@ -21,15 +21,16 @@ const CalendarEvents: React.FC = () => {
       try {
         setLoading(true);
         setError(null);
-        
-        console.log('Loading calendar events...');
+
+        console.log("Loading calendar events...");
         const fetchedEvents = await fetchCalendarEvents(20);
-        console.log('Events loaded successfully:', fetchedEvents);
+        console.log("Events loaded successfully:", fetchedEvents);
         setEvents(fetchedEvents);
-        
       } catch (err) {
-        console.error('Error loading events:', err);
-        setError(`Failed to load calendar events: ${err instanceof Error ? err.message : 'Unknown error'}`);
+        console.error("Error loading events:", err);
+        setError(
+          `Failed to load calendar events: ${err instanceof Error ? err.message : "Unknown error"}`,
+        );
       } finally {
         setLoading(false);
       }
@@ -64,14 +65,11 @@ const CalendarEvents: React.FC = () => {
 
   return (
     <div className="container my-5">
-      <h2 className="text-center mb-4">Upcoming Events</h2>
-      
       {events.length === 0 ? (
-        <div className="text-center">
-          <p>No upcoming events found for the next 12 months.</p>
-        </div>
+        <div className="text-center"></div>
       ) : (
         <div className="row">
+          <h2 className="text-center mb-4">Upcoming Events</h2>
           {events.map((event) => (
             <div key={event.id} className="col-md-6 col-lg-4 mb-4">
               <div className="card h-100 shadow-sm">
@@ -96,13 +94,13 @@ const CalendarEvents: React.FC = () => {
                   {event.description && (
                     <p className="card-text">
                       {event.description.substring(0, 100)}
-                      {event.description.length > 100 ? '...' : ''}
+                      {event.description.length > 100 ? "..." : ""}
                     </p>
                   )}
-                  <a 
-                    href={event.htmlLink} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href={event.htmlLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="btn btn-sm btn-outline-primary"
                   >
                     View in Google Calendar
