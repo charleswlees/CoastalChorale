@@ -72,32 +72,6 @@ function Contact() {
               )}
             </Card.Body>
 
-            <Card.Body className="p-4 p-md-5 pt-0 text-center">
-              <hr />
-              <div className="mt-4">
-                <h5 className="text-muted">Follow Our Journey</h5>
-                <p>Stay up to date with our latest news and media.</p>
-                <div>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61560039329545"
-                    className="text-dark mx-3"
-                    aria-label="Facebook"
-                  >
-                    <FaFacebook size={30} />
-                  </a>
-                  <a
-                    href="https://www.instagram.com/coastal.chorale?utm_source=ig_web_button_share_sheet&igsh=Z2JrbzBiajEwNmsy"
-                    className="text-dark mx-3"
-                    aria-label="Instagram"
-                  >
-                    <FaInstagram size={30} />
-                  </a>
-                  <a href="#" className="text-dark mx-3" aria-label="YouTube">
-                    <FaYoutube size={30} />
-                  </a>
-                </div>
-              </div>
-            </Card.Body>
           </Card>
         </Col>
       </Row>
