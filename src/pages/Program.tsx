@@ -8,21 +8,18 @@ interface Song {
 }
 
 const programFirstHalf: Song[] = [
-  { title: "Unclouded Day", arranger: "Shawn Kirchner" },
-  { title: "The Wild Mountain Thyme", arranger: "Reginald Unterseher" },
-  { title: "Emerald Stream", composer: "Seth Houston" },
-  { title: "Danny Boy", arranger: "Jamey Ray" },
-  { title: "Happy Together", composer: "The Turtles", arranger: "Gwendelyn Hill" },
-  { title: "Rainbow Connection", composer: "The Muppets", arranger: "Forrest Tripp" },
+  { title: "All that Hath Life & Breath Praise Ye the Lord!", arranger: "René Clausen" },
+  { title: "Omnia Sol", composer: "Z. Randall Stroope" },
+  { title: "Music of Living", arranger: "Dan Forrest" },
+  { title: "Warum ist das Licht gegeben dem Mühseligen", composer: "Johannes Brahms" },
+  { title: "City Called Heaven", arranger: "Josephine Poelinitz" },
 ];
 
 const programSecondHalf: Song[] = [
-  { title: "Horizons", composer: "Peter Louis Van Dijk" },
-  { title: "Mama Who Bore Me", composer: "Duncan Sheik" },
-  { title: "WildFlower", composer: "Billie Eilish", arranger: "Mugila/Van den Broek" },
-  { title: "Stars", composer: "Eriks Esenvalds" },
-  { title: "Cloudburst", composer: "Eric Whitacre" },
-  { title: "Garden", composer: "Leonard Bernstein", arranger: "Robert Page" },
+  { title: "Small Groups"},
+  { title: "Bach (Again)", composer: "J.S. Bach", arranger: "Rhonda Sandberg" },
+  { title: "Hymn of Axciom", composer: "Vienna Teng", arranger: "Forrest Tripp" },
+  { title: "Ain't No Grave", arranger: "Paul Caldwell & Sean Ivory" },
 ];
 
 const SongList: React.FC<{ songs: Song[] }> = ({ songs }) => (
