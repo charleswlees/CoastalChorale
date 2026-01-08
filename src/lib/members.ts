@@ -44,7 +44,7 @@ directors.push(forrestMember);
 
 import GwenImage from '../assets/headshots_2025/MGK_4083.jpg'
 const gwenBio: Bio = {
-  name: "Gwendelyn Ruby Hill",
+  name: "Gwendelyn Cooper",
   part: "Alto"
 }
 const gwenMember = createMember(gwenBio, GwenImage, "gwendelyn-ruby-hill")
@@ -53,6 +53,8 @@ directors.push(gwenMember);
 ////////////////////
 //////Members///////
 ////////////////////
+
+import placeholderImage from '../assets/placeholder.png'
 
 //Aaron Lockman
 import aaronImage from '../assets/headshots_2025/MGK_4077.jpg'
@@ -117,6 +119,15 @@ const camilleBio: Bio = {
 const camilleMember = createMember(camilleBio, camilleImage, "camille-pierce")
 members.push(camilleMember)
 
+//Catherine Aguiar-Dirio
+import catherineImage from '../assets/headshots_winter2025/catherine-aguiardirio.jpg'
+const catherineBio: Bio = {
+  name: "Catherine Aguiar-Dirio",
+  part: "Soprano"
+}
+const catherineMember = createMember(catherineBio, catherineImage, "catherine-aguiar-dirio")
+members.push(catherineMember)
+
 //Charlie Lees
 import charlieImage from '../assets/headshots_2025/MGK_4111.jpg'
 const charlieBio: Bio = {
@@ -126,6 +137,7 @@ const charlieBio: Bio = {
 const charlieMember = createMember(charlieBio, charlieImage, "charlie-lees")
 members.push(charlieMember)
 
+/*
 //Dylan Lindsey
 import dylanImage from '../assets/headshots_2025/MGK_4104.jpg'
 const dylanBio: Bio ={
@@ -134,6 +146,17 @@ const dylanBio: Bio ={
 }
 const dylanMember = createMember(dylanBio, dylanImage, "dylan-lindsey")
 members.push(dylanMember)
+*/
+
+//Emily Cprot
+import emilyImage from '../assets/headshots_winter2025/emily-cprot.jpg'
+const emilyBio: Bio ={
+  name: "Emily Cprot",
+  part: "Alto"
+}
+const emilyMember = createMember(emilyBio, emilyImage, "emily-cprot")
+members.push(emilyMember)
+
 
 //Henry Doering
 import henryImage from '../assets/headshots_2025/MGK_4080.jpg'
@@ -153,8 +176,16 @@ const izzyBio: Bio ={
 const izzyMember = createMember(izzyBio, izzyImage, "isabelle-izzy-simbari")
 members.push(izzyMember);
 
+//Jennifer Shevlin-Fernandes
+const jenniferBio: Bio ={
+  name: "Jennifer Shevlin-Fernandes",
+  part: "Soprano"
+}
+const jenniferMember = createMember(jenniferBio, placeholderImage, "jennifer-shevlin-fernandes")
+members.push(jenniferMember)
+
 //John Probert
-import johnImage from '../assets/headshots_2025/MGK_4129.jpg'
+import johnImage from '../assets/headshots_winter2025/john-probert.jpg'
 const johnBio: Bio ={
   name: "John K. Probert",
   part: "Tenor"
@@ -180,6 +211,15 @@ const juliannaBio: Bio ={
 const juliannaMember = createMember(juliannaBio, juliannaImage, "julianna-burke")
 members.push(juliannaMember);
 
+//Julien Leavitt
+import julienImage from '../assets/headshots_winter2025/julien-leavitt.jpg'
+const julienBio: Bio ={
+  name: "Julien Leavitt",
+  part: "Tenor"
+}
+const julienMember = createMember(julienBio, julienImage, "julien-leavitt")
+members.push(julienMember)
+
 //Justin Lamoureaux
 import justinImage from '../assets/headshots_2025/MGK_4076.jpg'
 const justinBio: Bio ={
@@ -189,7 +229,7 @@ const justinBio: Bio ={
 const justinMember = createMember(justinBio, justinImage, "justin-lamoureaux")
 members.push(justinMember)
 
-//Kate McElwain
+//Kate Nickerson
 import kateImage from '../assets/headshots_2025/MGK_4115.jpg'
 const kateBio: Bio ={
   name: "Kate Nickerson",
@@ -207,6 +247,15 @@ const laurenBio: Bio ={
 const laurenMember = createMember(laurenBio, laurenImage, "lauren-dickson")
 members.push(laurenMember)
 
+//Lisa Tripp
+import lisaImage from '../assets/headshots_winter2025/lisa-tripp.jpg'
+const lisaBio: Bio ={
+  name: "Lisa Tripp",
+  part: "Soprano"
+}
+const lisaMember = createMember(lisaBio, lisaImage, "lisa-tripp")
+members.push(lisaMember)
+
 //Lydia Schneider
 import lydiaImage from '../assets/headshots_2025/MGK_4135.jpg'
 const lydiaBio: Bio ={
@@ -215,6 +264,24 @@ const lydiaBio: Bio ={
 }
 const lydiaMember = createMember(lydiaBio, lydiaImage, "lydia-schneider")
 members.push(lydiaMember)
+
+//Michael Milazzo
+import michaelImage from '../assets/headshots_winter2025/michael-milazzo.jpg'
+const michaelBio: Bio ={
+  name: "Michael Milazzo",
+  part: "Tenor"
+}
+const michaelMember = createMember(michaelBio, michaelImage, "michael-milazzo")
+members.push(michaelMember)
+
+//Michala Valley Michaud
+import michalaImage from '../assets/headshots_winter2025/michala-michaud.jpg'
+const michalaBio: Bio ={
+  name: "Michala Valley Michaud",
+  part: "Soprano"
+}
+const michalaMember = createMember(michalaBio, michalaImage, "michala-valley-michaud")
+members.push(michalaMember)
 
 //Mike Knowles
 import mikeImage from '../assets/headshots_2025/MGK_4143.jpg'
@@ -243,6 +310,7 @@ const nataliaBio: Bio ={
 const nataliaMember = createMember(nataliaBio, nataliaImage, "natalia-kimball")
 members.push(nataliaMember)
 
+/*
 //Pip Kolmar
 import pipImage from '../assets/headshots_2025/MGK_4109.jpg'
 const pipBio: Bio ={
@@ -251,24 +319,44 @@ const pipBio: Bio ={
 }
 const pipMember = createMember(pipBio, pipImage, "pip-kolmar")
 members.push(pipMember)
+*/
 
 //Ryan Conway
 import ryanImage from '../assets/headshots_2025/MGK_4110.jpg'
 const ryanBio: Bio ={
-  name: "Ryan Thomas Conaway",
+  name: "Ryan Thomas Conway",
   part: "Bass"
 }
 const ryanMember = createMember(ryanBio, ryanImage, "ryan-thomas-conaway")
 members.push(ryanMember)
 
-//Sara Macy
-import saraImage from '../assets/headshots_2025/MGK_4123.jpg'
-const saraBio: Bio ={
-  name: "Sara Macy",
+//Ryan Murray
+import ryanMImage from '../assets/headshots_winter2025/ryan-murray.jpg'
+const ryanMurrayBio: Bio ={
+  name: "Ryan Murray",
+  part: "Bass"
+}
+const ryanMurrayMember = createMember(ryanMurrayBio, ryanMImage, "ryan-murray")
+members.push(ryanMurrayMember)
+
+//Sarah Macy
+import sarahImage from '../assets/headshots_2025/MGK_4123.jpg'
+const sarahBio: Bio ={
+  name: "Sarah Macy",
   part: "Soprano"
 }
-const saraMember = createMember(saraBio, saraImage, "sara-macy")
-members.push(saraMember);
+const sarahMember = createMember(sarahBio, sarahImage, "sarah-macy")
+members.push(sarahMember);
+
+/*
+//Sara Todd
+const saraToddBio: Bio ={
+  name: "Sara Todd",
+  part: "TBD"
+}
+const saraToddMember = createMember(saraToddBio, placeholderImage, "sara-todd")
+members.push(saraToddMember)
+*/
 
 //Simon Roussel
 import simonImage from '../assets/headshots_2025/MGK_4222.jpg'
@@ -288,6 +376,7 @@ const soozinBio: Bio ={
 const soozinMember = createMember(soozinBio, soozinImage, "soozin-kim-cha")
 members.push(soozinMember)
 
+/*
 //Taylor Everett
 import taylorImage from '../assets/headshots_2025/MGK_4223.jpg'
 const taylorBio : Bio ={
@@ -296,6 +385,26 @@ const taylorBio : Bio ={
 }
 const taylorMember  = createMember(taylorBio, taylorImage, "taylor-everett")
 members.push(taylorMember)
+*/
+
+
+//Tess LeClair
+const tessBio : Bio ={
+  name: "Tess LeClair",
+  part: "Alto"
+}
+const tessMember  = createMember(tessBio, placeholderImage, "tess-leclair")
+members.push(tessMember)
+
+
+//Tessa Solomon
+import tessaImage from '../assets/headshots_winter2025/tessa-solomon.jpg'
+const tessaBio : Bio ={
+  name: "Tessa Solomon",
+  part: "Alto"
+}
+const tessaMember  = createMember(tessaBio, tessaImage, "tessa-solomon")
+members.push(tessaMember)
 
 //Wyatt Cannell
 import wyattImage from '../assets/headshots_2025/MGK_4089.jpg'
