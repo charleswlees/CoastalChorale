@@ -1,7 +1,7 @@
 
 import React, { useState, useRef } from "react"; // Import useState and useRef
 import { Container, Card, Row, Col } from "react-bootstrap";
-import { FaFacebook, FaInstagram, FaYoutube, FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 import groupPhoto from "../assets/group_photos/2025/group_photo.jpg";
 
