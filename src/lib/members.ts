@@ -119,13 +119,13 @@ const camilleBio: Bio = {
 const camilleMember = createMember(camilleBio, camilleImage, "camille-pierce")
 members.push(camilleMember)
 
-//Catherine Aguiar-Dirio
+//Catherine Aguiar-DiOrio
 import catherineImage from '../assets/headshots_winter2025/catherine-aguiardirio.jpg'
 const catherineBio: Bio = {
-  name: "Catherine Aguiar-Dirio",
+  name: "Catherine Aguiar-DiOrio",
   part: "Soprano"
 }
-const catherineMember = createMember(catherineBio, catherineImage, "catherine-aguiar-dirio")
+const catherineMember = createMember(catherineBio, catherineImage, "catherine-aguiar-diorio")
 members.push(catherineMember)
 
 //Charlie Lees
@@ -177,11 +177,12 @@ const izzyMember = createMember(izzyBio, izzyImage, "isabelle-izzy-simbari")
 members.push(izzyMember);
 
 //Jennifer Shevlin-Fernandes
+import jennImage from '../assets/headshots_winter2025/jenn.jpg'
 const jenniferBio: Bio ={
   name: "Jennifer Shevlin-Fernandes",
   part: "Soprano"
 }
-const jenniferMember = createMember(jenniferBio, placeholderImage, "jennifer-shevlin-fernandes")
+const jenniferMember = createMember(jenniferBio, jennImage, "jennifer-shevlin-fernandes")
 members.push(jenniferMember)
 
 //John Probert
@@ -339,6 +340,7 @@ const ryanMurrayBio: Bio ={
 const ryanMurrayMember = createMember(ryanMurrayBio, ryanMImage, "ryan-murray")
 members.push(ryanMurrayMember)
 
+/*
 //Sarah Macy
 import sarahImage from '../assets/headshots_2025/MGK_4123.jpg'
 const sarahBio: Bio ={
@@ -347,6 +349,7 @@ const sarahBio: Bio ={
 }
 const sarahMember = createMember(sarahBio, sarahImage, "sarah-macy")
 members.push(sarahMember);
+*/
 
 /*
 //Sara Todd
@@ -389,11 +392,12 @@ members.push(taylorMember)
 
 
 //Tess LeClair
+import tessImage from '../assets/headshots_winter2025/tess-leclair.jpg'
 const tessBio : Bio ={
   name: "Tess LeClair",
   part: "Alto"
 }
-const tessMember  = createMember(tessBio, placeholderImage, "tess-leclair")
+const tessMember  = createMember(tessBio, tessImage, "tess-leclair")
 members.push(tessMember)
 
 
