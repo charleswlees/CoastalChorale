@@ -28,9 +28,6 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="calendar-section">
-        <CalendarEvents />
-      </section>
     </>
   );
 }
