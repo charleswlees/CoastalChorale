@@ -1,4 +1,4 @@
-import CalendarEvents from "../pages/Calendar";
+//import CalendarEvents from "../pages/Calendar";
 
 function Home() {
   return (

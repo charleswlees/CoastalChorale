@@ -54,7 +54,7 @@ directors.push(gwenMember);
 //////Members///////
 ////////////////////
 
-import placeholderImage from '../assets/placeholder.png'
+//import placeholderImage from '../assets/placeholder.png'
 
 //Aaron Lockman
 import aaronImage from '../assets/headshots_2025/MGK_4077.jpg'
