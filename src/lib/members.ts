@@ -148,13 +148,13 @@ const dylanMember = createMember(dylanBio, dylanImage, "dylan-lindsey")
 members.push(dylanMember)
 */
 
-//Emily Cprot
+//Emily Protzmann
 import emilyImage from '../assets/headshots_winter2025/emily-cprot.jpg'
 const emilyBio: Bio ={
-  name: "Emily Cprot",
+  name: "Emily Protzmann",
   part: "Alto"
 }
-const emilyMember = createMember(emilyBio, emilyImage, "emily-cprot")
+const emilyMember = createMember(emilyBio, emilyImage, "emily-protzmann")
 members.push(emilyMember)
 
 
