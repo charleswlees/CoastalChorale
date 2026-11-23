@@ -58,7 +58,7 @@ function AppNavbar() {
             <div className="d-flex flex-column flex-lg-row">
               {/* Add the onClick handler to each link */}
               <Nav.Link as={Link} to="/about" onClick={() => setExpanded(false)}>
-                About
+                Members
               </Nav.Link>
               <Nav.Link as={Link} to="/contact" onClick={() => setExpanded(false)}>
                 Contact

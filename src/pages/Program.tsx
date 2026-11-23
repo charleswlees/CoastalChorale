@@ -1,5 +1,5 @@
-import React from "react";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import React, { useState } from "react";
+import { Container, Row, Col, Card, Form } from "react-bootstrap";
 
 interface Song {
   title: string;
@@ -7,7 +7,13 @@ interface Song {
   arranger?: string;
 }
 
-const programFirstHalf: Song[] = [
+interface SeasonProgram {
+  season: string;
+  firstHalf: Song[];
+  secondHalf: Song[];
+}
+
+const winter2026FirstHalf: Song[] = [
   { title: "All that Hath Life & Breath Praise Ye the Lord!", arranger: "René Clausen" },
   { title: "Omnia Sol", composer: "Z. Randall Stroope" },
   { title: "Music of Living", arranger: "Dan Forrest" },
@@ -15,11 +21,20 @@ const programFirstHalf: Song[] = [
   { title: "City Called Heaven", arranger: "Josephine Poelinitz" },
 ];
 
-const programSecondHalf: Song[] = [
+const winter2026SecondHalf: Song[] = [
   { title: "Small Groups"},
   { title: "Bach (Again)", composer: "J.S. Bach", arranger: "Rhonda Sandberg" },
   { title: "Hymn of Axciom", composer: "Vienna Teng", arranger: "Forrest Tripp" },
   { title: "Ain't No Grave", arranger: "Paul Caldwell & Sean Ivory" },
+];
+
+// Newest season first; add past programs below the current one.
+const programs: SeasonProgram[] = [
+  {
+    season: "Winter 2026",
+    firstHalf: winter2026FirstHalf,
+    secondHalf: winter2026SecondHalf,
+  },
 ];
 
 const SongList: React.FC<{ songs: Song[] }> = ({ songs }) => (
@@ -38,11 +53,15 @@ const SongList: React.FC<{ songs: Song[] }> = ({ songs }) => (
 );
 
 function Program() {
+  const [season, setSeason] = useState(programs[0].season);
+  const program = programs.find((p) => p.season === season) ?? programs[0];
+  const isCurrent = program === programs[0];
+
   return (
     <Container className="my-5">
       <div className="text-center mb-5">
         <h1>Concert Program</h1>
-        <p className="lead">Our upcoming performance repertoire</p>
+        <p className="lead">{isCurrent ? "Our upcoming performance repertoire" : `${program.season} repertoire`}</p>
       </div>
 
       <Row className="justify-content-center">
@@ -52,7 +71,7 @@ function Program() {
               <h2 className="text-center mb-4 border-bottom pb-2">
                 First Half
               </h2>
-              <SongList songs={programFirstHalf} />
+              <SongList songs={program.firstHalf} />
             </Card.Body>
           </Card>
 
@@ -69,7 +88,7 @@ function Program() {
               <h2 className="text-center mb-4 border-bottom pb-2">
                 Second Half
               </h2>
-              <SongList songs={programSecondHalf} />
+              <SongList songs={program.secondHalf} />
             </Card.Body>
           </Card>
 
@@ -82,6 +101,21 @@ function Program() {
           </div>
           */
           }
+
+          <Form.Group className="mt-5" controlId="season-select">
+            <Form.Label>Season</Form.Label>
+            <Form.Select
+              value={season}
+              onChange={(e) => setSeason(e.target.value)}
+            >
+              {programs.map((p, i) => (
+                <option key={p.season} value={p.season}>
+                  {p.season}
+                  {i === 0 ? " (current)" : ""}
+                </option>
+              ))}
+            </Form.Select>
+          </Form.Group>
         </Col>
       </Row>
     </Container>
